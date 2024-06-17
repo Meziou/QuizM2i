@@ -27,7 +27,7 @@ INSERT INTO quizs (name) VALUES
 ('Pokemon'),
 ('Jeu videos'),
 ('Films'),
-('Manga')
+('Manga');
 
 INSERT INTO questions(name, response, correctAnswer) VALUES
 ("Quel Pokémon est une souris électrique ?", "Salamèche, Pikachu, Bulbizarre, Carapuce", 2),
@@ -64,7 +64,7 @@ INSERT INTO questions(name, response, correctAnswer) VALUES
 ('Dans \'My Hero Academia\', quel est le véritable nom de l\'héroïne Uravity ?', 'Ochaco Uraraka, Momo Yaoyorozu, Tsuyu Asui, Mina Ashido', 1),
 ('Quel manga se déroule dans le monde des alchimistes et suit les frères Elric ?', 'Fullmetal Alchemist, One Piece, Fairy Tail, Bleach', 1),
 ('Dans \'Hunter x Hunter\', quel est le nom du meilleur ami de Gon ?', 'Kurapika, Leorio, Hisoka, Killua', 4),
-('Quel manga met en scène un jeune homme nommé Eren Jaeger qui veut éliminer tous les titans ?', 'Attack on Titan, Naruto, Dragon Ball, One Punch Man', 1)
+('Quel manga met en scène un jeune homme nommé Eren Jaeger qui veut éliminer tous les titans ?', 'Attack on Titan, Naruto, Dragon Ball, One Punch Man', 1);
 
 INSERT INTO quizs_questions (id_quizs, id_questions) VALUES
 (1, 1), 
@@ -101,4 +101,4 @@ INSERT INTO quizs_questions (id_quizs, id_questions) VALUES
 (4, 32), 
 (4, 33), 
 (4, 34), 
-(4, 35)
+(4, 35);
