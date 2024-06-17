@@ -1,27 +1,27 @@
 USE quizM2i;
 
+DROP Table if EXISTS quizs_questions;
 DROP Table if EXISTS quizs;
 DROP Table if EXISTS questions;
-DROP Table if EXISTS quizs_questions;
 
 CREATE table quizs(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL
-);
+)ENGINE=InnoDB;
 CREATE table questions(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     response VARCHAR (255) NOT NULL,
-    correctAnswer INT NOT NULL 
-);
+    correctAnswer INT NOT NULL
+)ENGINE=InnoDB;
 
 CREATE TABLE quizs_questions (
     id_quizs INT,
     id_questions INT,
     PRIMARY KEY (id_quizs, id_questions),
-    FOREIGN KEY (id_quizs) REFERENCES quizs(id),
-    FOREIGN KEY (id_questions) REFERENCES questions(id)
-);
+    FOREIGN KEY (id_quizs) REFERENCES quizs(id)  ON DELETE CASCADE,
+    FOREIGN KEY (id_questions) REFERENCES questions(id) ON DELETE CASCADE
+)ENGINE=InnoDB;
 
 INSERT INTO quizs (name) VALUES 
 ('Pokemon'),
