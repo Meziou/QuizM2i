@@ -1,0 +1,12 @@
+.crossParent {
+    position: relative;
+}
+
+.deleteCross {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
