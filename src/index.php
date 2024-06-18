@@ -68,6 +68,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
     Add quiz
 </button>
+<a class="btn btn-primary" href="question_manage.php">Gérer les questions</a>
 
 
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
@@ -97,7 +98,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
 <div class="row">
     <?php foreach ($quizs as $quiz) : ?>
         <div class="col-md-4 mb-4">
-            <a href="#" style="text-decoration: none;">
+            <a href="quiz.php?id=<?= $quiz['id'] ?>" style="text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center"><?= $quiz['name'] ?></h5>

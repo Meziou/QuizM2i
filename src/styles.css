@@ -2,11 +2,14 @@
     position: relative;
 }
 
-.deleteCross {
+.deleteCross{
     position: absolute;
-    top: 4px;
-    right: 4px;
-    color: red;
+    top: -14px;
+    right: -14px;
     text-decoration: none;
-    font-size: 20px;
+    padding: 4px;
+    font-size: 18px;
+    border: solid 1px lightgrey;
+    border-radius: 50px;
+    background-color: white;
 }

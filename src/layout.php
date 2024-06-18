@@ -10,6 +10,7 @@
 </head>
 <body>
         <main class="container">
+            <a href="index.php">Quiz</a>
             <h1><?php echo $title ?></h1>
             <?php echo $content ?>
         </main>

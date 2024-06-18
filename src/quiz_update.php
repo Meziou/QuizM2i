@@ -22,21 +22,19 @@ $questions = $result->fetch_all(MYSQLI_ASSOC);
 
 <h2 class="text-primary text-center">Quiz <?php echo $quiz['name'] ?></h2>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addQuestionModal">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addQuestionModal">
         Ajouter une question
     </button>
 <div>
     <?php foreach ($questions as $question): ?>
-        <div class="crossParent border border-3 rounded my-3 p-2">
+        <div class="crossParent border border-3 rounded my-4 p-2">
             <a class="deleteCross" href="delete_question.php?id=<?= $question['id']?>&quiz_id=<?= $id ?>">❌</a>
             <form action="question_update.php" method="post">
                 <input type="hidden" name="quiz_id" value="<?= $id ?>">
                 <input type="hidden" name="question_id" value="<?= $question['id'] ?>">
-                <p class="text-primary">Question <?php echo $question['id'] ?></p>
-
                 <textarea name="name"  class="form-control my-3" required><?php echo $question['name']?></textarea>
                 <textarea name="response"  class="form-control my-3" required><?php echo $question['response']?></textarea>
-                <label for="correctAnswer" class="mt-1">Réponse (1,2,3,4):</label>
+                <label for="correctAnswer" class="mt-1">Réponse (1,2,3,4) :</label>
                 <input type="number" name="correctAnswer" class="form-control mb-4" value="<?php echo $question['correctAnswer']?>" required>
                 <button class="btn btn-success" type="submit">Enregistrer</button>
             </form>
@@ -51,9 +49,6 @@ $questions = $result->fetch_all(MYSQLI_ASSOC);
             <form action="question_add.php" method="post">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addQuestionModalLabel">Ajouter une question</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="quiz_id" value="<?= $id ?>">
@@ -62,25 +57,22 @@ $questions = $result->fetch_all(MYSQLI_ASSOC);
                         <input type="text" class="form-control" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="response">Responses</label>
+                        <label for="response">Réponses</label>
                         <textarea class="form-control" name="response" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="correctAnswer">Correct Answer (index)</label>
+                        <label for="correctAnswer">Bonne réponse (index)</label>
                         <input type="number" class="form-control" name="correctAnswer" required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                     <button type="submit" class="btn btn-primary">Ajouter</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 
 
 <?php
