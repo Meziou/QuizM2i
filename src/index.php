@@ -116,12 +116,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
     <?php endforeach; ?>
 </div>
 
-<script>
-    function setUpdateFormData(id, name) {
-        document.getElementById('updateQuizId').value = id;
-        document.getElementById('updateQuizName').value = name;
-    }
-</script>
+
 
 <?php
 $title = 'Quizs';
