@@ -39,6 +39,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 
+
 <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -97,7 +98,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
 <div class="row">
     <?php foreach ($quizs as $quiz) : ?>
         <div class="col-md-4 mb-4">
-            <a href="#" style="text-decoration: none;">
+            <a href="quiz.php?id=<?= $quiz['id'] ?>" style="text-decoration: none;">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-center"><?= $quiz['name'] ?></h5>
