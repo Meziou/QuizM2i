@@ -39,6 +39,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 
+
 <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -116,12 +117,7 @@ $quizs = $result->fetch_all(MYSQLI_ASSOC);
     <?php endforeach; ?>
 </div>
 
-<script>
-    function setUpdateFormData(id, name) {
-        document.getElementById('updateQuizId').value = id;
-        document.getElementById('updateQuizName').value = name;
-    }
-</script>
+
 
 <?php
 $title = 'Quizs';
