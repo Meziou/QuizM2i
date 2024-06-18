@@ -11,7 +11,7 @@
 </head>
 
 <body>
-        <main class="container-fluid">
+        <main class="container">
             <h1><?php echo $title ?></h1>
             <?php echo $content ?>
         </main>
