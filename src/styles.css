@@ -13,3 +13,42 @@
     border-radius: 50px;
     background-color: white;
 }
+.btn-answer {
+    font-size: 1.5rem;
+}
+.btn-answer:hover, .btn-answer.clicked {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff;
+}
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#timer {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.question {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.result-message {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+.correct {
+    background-color: #d4edda;
+    color: #14812f;
+    font-weight: bold;
+}
+.wrong {
+    background-color: #f8d7da;
+    color: #a81e2b;
+    font-weight: bold;
+}

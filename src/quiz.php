@@ -12,10 +12,9 @@ $quiz = $result->fetch_assoc();
 ?>
 
 <div class="text-center d-flex flex-column justify-content-center align-items-center mt-5">
-    <h2 class="text-primary"><?php echo $quiz['name'] ?></h2>
     <div class="mt-3">
         <a class="btn btn-secondary btn-lg mr-2" href="quiz_update.php?id=<?= $id ?>">Modifier le quiz</a>
-        <a class="btn btn-success btn-lg">JOUER</a>
+        <a class="btn btn-success btn-lg" href="quizGameDisplay.php?id=<?= $id ?>">JOUER</a>
     </div>
 </div>
 

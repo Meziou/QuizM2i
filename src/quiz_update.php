@@ -20,7 +20,7 @@ $result = $conn->query($sql2);
 $questions = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
-<h2 class="text-primary text-center">Quiz <?php echo $quiz['name'] ?></h2>
+<h2 class="text-primary text-center mt-4"><?php echo $quiz['name'] ?></h2>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addQuestionModal">
         Ajouter une question
