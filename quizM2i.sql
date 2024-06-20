@@ -1,8 +1,8 @@
 USE quizM2i;
 
+DROP Table if EXISTS quizs_questions;
 DROP Table if EXISTS quizs;
 DROP Table if EXISTS questions;
-DROP Table if EXISTS quizs_questions;
 
 CREATE table quizs(
     id INT PRIMARY KEY AUTO_INCREMENT,
